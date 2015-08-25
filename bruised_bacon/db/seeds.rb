@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Venue.create([{name: "The Pitz", city: "Brooklyn", state: "NY"},{name: "The Mittz", city: "Chicago", state: "NY"},{name: "The Nipz", city: "Pasedena", state: "CA"}])
-Event.create([{date: "May 4th, 2014", venue_id: 1, band_id: 1},{date: "Jan 4th, 2014", venue_id: 1, band_id: 2}])
+Event.create([{name: "Hell is Nigh, LETS ROCK", date: "May 4th, 2014", venue_id: 1, band_id: 1},{name: "Tomagotchi Farm", date: "Jan 4th, 2014", venue_id: 1, band_id: 2}])
 Band.create([{name: "Voltron, The", genre: "8-Bit metal Rock", explicit_lyrics: true},{name: "Smurffs, The", genre: "8-Bit Rap", explicit_lyrics: true}])
