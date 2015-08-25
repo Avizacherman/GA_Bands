@@ -6,9 +6,9 @@
 <p><%= @venue.city %></p>
 <p><%= @venue.state %></p>
 
-<button class="tiny button"><%= link_to 'Edit This Venue', edit_venue_path %></button><br>
-<button><%= link_to 'Delete This Venue', venue_path, method: :delete %></button><br>
-<button><%= link_to 'Back To Venues', venues_path %></button><br>
+<%= link_to 'Edit This Venue', edit_venue_path %><br>
+<%= link_to 'Delete This Venue', venue_path, method: :delete %><br>
+<%= link_to 'Back To Venues', venues_path %><br>
 
 </div>
 </div>
