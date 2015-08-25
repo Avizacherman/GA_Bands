@@ -1,1 +1,10 @@
-index.html.erb
+<% @bands.each do |band| %>
+<div class="text-center">
+<h3> <%=band.name %> </h3>
+<h5> Genre: <%=band.genre %> </h5>
+<% if band.explicit_lyrics %>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Parental_Advisory_label.svg/2000px-Parental_Advisory_label.svg.png"> 
+<% end %>
+
+
+<% end %>
