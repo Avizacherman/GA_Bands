@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :events
     resources :bands
 
+    get "/search" => "events#search"
+
   # Example resource route with options:
   #   resources :products do
   #     member do

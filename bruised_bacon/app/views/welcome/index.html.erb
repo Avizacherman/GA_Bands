@@ -2,3 +2,12 @@
 
 <%= link_to "Venues", venues_path %>
 
+<%= link_to "Bands", bands_path %>
+
+<%= link_to "Events", events_path %>
+
+<h4> Search for a Event by Date </h4>
+<% form_for Event, url: {action: "search", :controller => "events"}, method: :get do |f| %>
+<p> <%=f.text_field :search, pattern: "\d{1,2}/\d{1,2}/\d{4}" %> </p>
+<%=f.submit "Search" %>
+<% end %>
