@@ -1,1 +1,4 @@
-<%= render partial: "shared/bands_form", local: {band: @bands} %>
+<h2> Edit <%=@band.name%> </h2>
+
+
+<%= render partial: "shared/bands_form", locals: {band: @band} %>

@@ -1,5 +1,6 @@
 <%= form_for(band) do |f| %>
  <p> Band Name: <%= f.text_field :name %> </p>
  <p> Genre: <%= f.text_field :genre %> </p>
- <p> Explicit Lyrics <%= f.select :explicit_lyrics, [['Yes', true], ['No', false]] :selected => band.explicit_lyrics %> </p>
+ <p> Explicit Lyrics <%= f.select :explicit_lyrics, [['Yes', true], ['No', false]], :selected => band.explicit_lyrics %> </p>
+ <%= f.submit %>
 <% end %>
