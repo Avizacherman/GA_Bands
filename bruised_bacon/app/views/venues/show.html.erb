@@ -6,7 +6,7 @@
 <p><%= @venue.city %></p>
 <p><%= @venue.state %></p>
 
-<%= link_to "Create Event", {:controller => "events", :action => "new", :venue_id => "venue.id"}%><br>
+<%= link_to "Create Event", {:controller => "events", :action => "new", :venue_id => @venue}%><br>
 <%= link_to 'Edit This Venue', edit_venue_path %><br>
 <%= link_to 'Delete This Venue', venue_path, method: :delete %><br>
 <%= link_to 'Back To Venues', venues_path %><br>
