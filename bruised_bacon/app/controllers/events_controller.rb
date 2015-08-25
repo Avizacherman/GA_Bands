@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @venue_id = params[:venue_id]
+
   end
 
   def create
@@ -29,6 +30,8 @@ class EventsController < ApplicationController
 
   def delete
     event = Event.find(params[:id])
+    event.destroy
+    redirect_to events_path
   end
 
   private
