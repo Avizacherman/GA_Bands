@@ -8,6 +8,6 @@
 
 <h4> Search for a Event by Date </h4>
 <%= form_tag('/search', method: :get) do %>
-<p> <%= text_field :search, pattern: "\d{1,2}/\d{1,2}/\d{4}" %> </p>
+<p> <%= text_field :search %> </p>
 <%=submit_tag "Search" %>
 <% end %>
