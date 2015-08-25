@@ -6,6 +6,10 @@
 <p><%= @venue.city %></p>
 <p><%= @venue.state %></p>
 
+<h2>Events at this Venue</h2>
+<p><%= @event.name %></p>
+<p><%= @event.date %></p>
+
 <%= link_to "Create Event", {:controller => "events", :action => "new", :venue_id => @venue.id}%><br>
 <%= link_to 'Edit This Venue', edit_venue_path %><br>
 <%= link_to 'Delete This Venue', venue_path, method: :delete %><br>
