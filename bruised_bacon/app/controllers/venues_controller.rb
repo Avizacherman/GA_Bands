@@ -26,7 +26,7 @@ class VenuesController < ApplicationController
 		redirect_to venues_path
 	end
 
-	def delete
+	def destroy
 		venue = Venue.find(params[:id])
 		venue.destroy
 		redirect_to venues_path
