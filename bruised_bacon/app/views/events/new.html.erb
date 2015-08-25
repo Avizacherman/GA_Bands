@@ -3,7 +3,7 @@
     <%= f.text_field :date, placeholder: 'Enter Date' %><br>
     <%= f.text_field :alcohol_served, placeholder: 'Will you be serving alcohol?' %><br>
     <%if @venue_id%>
-      <%= f.select :venue_id, [[@venue_id.name, @venue_id.id]], :readonly => true%><br>
+      <%= f.select :venue_id, [[Venue.find(@venue_id).name, @venue_id]], :readonly => true%><br>
     <%else%>
       <%= f.collection_select :venue_id, Venue.all, :id, :name %><br>
     <%end%>
