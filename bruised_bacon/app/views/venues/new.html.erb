@@ -1,0 +1,14 @@
+<div class="row body">
+<div class="large-9 columns">	
+<h1 id="about" class="about"><a href="">Create</a></h1>
+
+<%= form_for @venue do |v| %>
+    <%= v.text_field :name, placeholder: 'Name' %><br>
+    <%= v.text_field :city, placeholder: 'City' %><br>
+    <%= v.text_field :state, placeholder: 'State' %><br>
+    <%= v.select :family_friendly, [["yes", true],["no", false]]%><br>
+    <%= v.submit %>
+<% end %>
+
+</div>
+</div>
