@@ -2,11 +2,14 @@
 <div class="large-9 columns">	
 <h1 id="about" class="about"><a href="">Venues</a></h1>
 
+<%= link_to 'Create', new_venue_path %>
+
 <% @venues.each do |venue| %>
 <h2> <%= link_to venue.name, venue_path(venue.id) %> </h2>
 <p><%= venue.city %> </p>
 <p><%= venue.state %> </p>
 <% end %>
+
 
 </div>
 </div>

@@ -3,6 +3,15 @@ class VenuesController < ApplicationController
 		@venues = Venue.all
 	end
 
+	def new
+		@venue = Venue.new
+	end
+
+	def create
+		Venue.create(venue_params)
+		redirect_to venues_path
+	end
+
 	def show
 		@venue = Venue.find(params[:id])
 	end
