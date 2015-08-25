@@ -7,6 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="row body">
+	
+
+ 	<div data-magellan-expedition="fixed">
+  	<dl class="sub-nav navigation">
+    <dd data-magellan-arrival="build"><%=link_to "VENUES", venues_path%></dd>
+    <dd data-magellan-arrival="build"><%=link_to "BANDS", bands_path %></dd>
+    <dd data-magellan-arrival="build"><%=link_to "EVENTS", events_path %></dd>
+    </dl>
+</div>
+ </div>
+
 
 <%= yield %>
 
