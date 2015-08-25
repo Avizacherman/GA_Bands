@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825204732) do
+ActiveRecord::Schema.define(version: 20150825201258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bands", force: :cascade do |t|
     t.string   "name"
+    t.integer  "venue_id"
+    t.integer  "event_id"
     t.string   "genre"
     t.boolean  "explicit_lyrics", default: false
     t.datetime "created_at",                      null: false
