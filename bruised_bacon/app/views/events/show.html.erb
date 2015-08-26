@@ -6,6 +6,6 @@
 <h2><%=@event.date%></h2>
 <h3>Located in: <%=Venue.find(@event.venue_id).name%></h3>
 <h3>Featuring: <%=Band.find(@event.band_id).name%></h3>
-
+<%= link_to 'Edit This Event', edit_event_path %><br>
 </div>
 </div>
