@@ -1,13 +1,9 @@
 <h1>Welcome to Band.io</h1>
 
-<%= link_to "Venues", venues_path %>
 
-<%= link_to "Bands", bands_path %>
-
-<%= link_to "Events", events_path %>
 
 <h4> Search for a Event by Date </h4>
 <%= form_tag('/search', method: :get) do %>
-<p> <%= text_field :search %> </p>
+<p> <%= date_select :date, :date %> </p>
 <%=submit_tag "Search" %>
 <% end %>

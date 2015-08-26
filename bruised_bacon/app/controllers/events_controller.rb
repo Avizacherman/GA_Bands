@@ -35,7 +35,8 @@ class EventsController < ApplicationController
   end
 
   def search
-    @results = Events.search(params[:search])
+
+    @results = Event.search(params[:search])
     render :results
   end
 
