@@ -1,0 +1,21 @@
+<div class="row body">
+<div class="large-9 columns">
+<h1 id="about" class="about"><a href="">Update your event</a></h1>
+
+
+<%= form_for @event do |f| %>
+    <%= f.text_field :name, placeholder: 'Name' %><br>
+    <%= f.date_select :date %><br>
+    <%= f.text_field :alcohol_served, placeholder: 'Will you be serving alcohol?' %><br>
+
+    <%if @venue_id%>
+      <%= f.select :venue_id, [[Venue.find(@venue_id).name, @venue_id]], :readonly => true%><br>
+    <%else%>
+      <%= f.collection_select :venue_id, Venue.all, :id, :name %><br>
+    <%end%>
+    <%= f.collection_select :band_id, Band.all, :id, :name %><br>
+    <%= f.submit %>
+<% end %>
+
+</div>
+</div>

@@ -1,2 +1,11 @@
+<div class="row body">
+<div class="large-9 columns">
+<h1 id="about" class="about"><a href="">Show</a></h1>
+
 <h1><%=@event.name%><h1>
 <h2><%=@event.date%></h2>
+<h3>Located in: <%=Venue.find(@event.venue_id).name%></h3>
+<h3>Featuring: <%=Band.find(@event.band_id).name%></h3>
+
+</div>
+</div>

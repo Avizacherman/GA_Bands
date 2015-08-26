@@ -1,0 +1,13 @@
+<div class="row body">
+<div class="large-9 columns">
+<h1 id="about" class="about"><a href="">Search Results</a></h1>
+
+
+<% @results.each do |x| %>
+<h2> <%= link_to x.name, event_path(x.id) %> </h2>
+<p><%= x.date %> </p>
+<% end %>
+
+
+</div>
+</div>

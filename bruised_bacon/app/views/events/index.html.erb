@@ -1,6 +1,13 @@
+<div class="row body">
+<div class="large-9 columns">
+<h1 id="about" class="about"><a href="">Events</a></h1>
+
 <%@events.each do |x| %>
 <h1><%= link_to x.name, event_path(x.id)%><h1>
-<h1><%= x.date%><h1>
+<h2><%= x.date%><h2>
 <h3>21 and over? <%=x.alcohol_served%><h3>
 <%end%>
 <%= link_to "New Event", new_event_path %>
+
+</div>
+</div>
