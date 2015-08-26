@@ -13,3 +13,22 @@
 	margin-left: 15%;
 
 }
+
+.container {
+	width: 85%;
+	margin: 5% auto;
+	background: rgba(194,194,194,.7);
+	height: 100%;
+}
+
+.background {
+	background: url('http://40.media.tumblr.com/tumblr_ma00rnyUO51qd4mylo1_1280.jpg');
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	opacity:
+}
