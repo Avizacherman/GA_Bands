@@ -35,7 +35,10 @@ class EventsController < ApplicationController
   end
 
   def search
-    @results = Events.search(params[:search])
+    year = params[:date]["date(1i)"]
+    month = params[:date]["date(2i)"]
+    day = params[:date]["date(3i)"]
+    @results = Event.search(year, month, day)
     render :results
   end
 
