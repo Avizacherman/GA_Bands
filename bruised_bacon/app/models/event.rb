@@ -4,6 +4,6 @@ class Event < ActiveRecord::Base
 
 	def self.search(year, month, day)
 			date = Date.new year.to_i, month.to_i, day.to_i
-			find(:all, :conditions => ['date LIKE ?', date)
+			where(date: date)
 	end
 end
