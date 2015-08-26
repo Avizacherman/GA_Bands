@@ -7,8 +7,10 @@
 <p><%= @venue.state %></p>
 
 <h2>Events at this Venue</h2>
-<p><%= @event.name %></p>
-<p><%= @event.date %></p>
+<% @events.each do |event| %>
+<p><%= event.name %></p>
+<% end %>
+
 
 <%= link_to "Create Event", {:controller => "events", :action => "new", :venue_id => @venue.id}%><br>
 <%= link_to 'Edit This Venue', edit_venue_path %><br>

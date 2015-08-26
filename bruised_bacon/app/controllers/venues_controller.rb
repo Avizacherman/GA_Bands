@@ -14,9 +14,9 @@ class VenuesController < ApplicationController
 
 	def show
 		@venue = Venue.find(params[:id])
-		@event = Event.find(params[:id])
-	end
+		@events = Event.where("venue_id = ?", params[:id])
 
+	end
 	def edit
 		@venue = Venue.find(params[:id])
 	end
